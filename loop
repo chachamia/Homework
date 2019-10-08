@@ -1,0 +1,39 @@
+
+def subtract(input1,input2):
+    return input1-input2
+
+def add(input1,input2):
+    return input1+input2
+
+def multiply(input1,input2):
+    return input*input2
+
+def divide(input1,input2):
+    return input/input2
+
+def calculate(input1, input2, operation):
+    if operation == '+':
+        return add(input1, input2)
+    elif operation == '-':
+        return subtract(input1, input2)
+    elif operation == '*':
+        return multiply(input1, input2)
+    elif operation == '/':
+        return divide(input1, input2)
+
+number = 0
+while(number < 100):
+    print(number)
+    number = number+1
+
+    first = int(input('What is the 1st value?'))
+    second = int(input('what is the second value?'))
+    rd = input('what you want to do?')
+    result = calculate(first, second, rd)
+    print(result)
+    a = input('Please press enter continue, type exit to finish ')
+    if a == 'exit':
+        break
+
+result = calculate(first, second, rd)
+print(result)
